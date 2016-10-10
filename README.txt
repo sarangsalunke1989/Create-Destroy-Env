@@ -1,5 +1,7 @@
 Author : Sarang Salunke
 
+Git URL - https://github.com/sarangsalunke1989/Create-Destroy-Env.git
+
 These scripts are used for setting up the Infrastructure of EC2 instances, Elastic Load Balancer and Auto Scaling Groups in the Amazon Cloud in the us-west-2a region.
 
 On creation you can use the load balancer DNS name in the browser which will help you to view our IIT website.
