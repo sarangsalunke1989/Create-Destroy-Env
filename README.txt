@@ -15,6 +15,14 @@ Sarang_AWS_KEY - AWS key . Can be found using  aws ec2 describe-key-pairs comman
 sg-ae15d0d7 - security group. Can be found using aws ec2 describe-security-groups. Make sure it has rules set to run/access http and ssh ports
 count - Number of EC2 instances that you need to deploy in the cloud
 
+During execution you will be prompted the following :-
+Enter a name for load balancer - Here please enter a valid string input name avaoiding blank and '_'.
+Enter launch configuration name - Here please enter a valid string input name avaoiding blank and '_'.
+Enter auto scaling group name - Here please enter a valid string input name avaoiding blank and '_'.
+
+This will create a customized named load balancer, launch configuration and auto scaling group for you. Make sure the names are unique.
+
+
 Make sure you have a subnet to serve in place for the us-west-2a region else the script will fail because I look for it during execution and dynamically use that to set up the infrastructure
 
 
