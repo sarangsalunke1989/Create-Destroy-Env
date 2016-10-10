@@ -6,11 +6,11 @@ On creation you can use the load balancer DNS name in the browser which will hel
 
 Creating Infrastructure
 ---------------------------------------
-Usage Syntax: create_env.sh <key_name> <security_group> <count>
+Usage Syntax: create-env.sh <key_name> <security_group> <count>
 
-eg: - ./create_env.sh Sarang_AWS_KEY sg-ae15d0d7 2
+eg: - ./create-env.sh Sarang_AWS_KEY sg-ae15d0d7 2
 
-where create_env.sh - Script 
+where create-env.sh - Script 
 Sarang_AWS_KEY - AWS key . Can be found using  aws ec2 describe-key-pairs command
 sg-ae15d0d7 - security group. Can be found using aws ec2 describe-security-groups. Make sure it has rules set to run/access http and ssh ports
 count - Number of EC2 instances that you need to deploy in the cloud
