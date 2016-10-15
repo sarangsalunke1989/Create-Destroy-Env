@@ -1,5 +1,6 @@
 ################################ Author : Sarang Salunke ###################################
-
+echo
+echo
 echo " ################################################################################################## "
 echo " Starting the Week-7 AWS code to deploy instances in cloud with load balancer and autoscaling group"
 echo " ################################################################################################## "
@@ -192,6 +193,7 @@ aws elb register-instances-with-load-balancer --load-balancer $load_bal_name --i
 if [ $? -eq 0 ]
 then
 echo "Instances are registered with your $load_bal_name load balancer " 
+echo
 else
 echo "Error registering instances with the load balancer ... Exiting execution"
 fi
@@ -214,6 +216,7 @@ aws autoscaling create-launch-configuration --launch-configuration-name $launch_
 if [ $? -eq 0 ]
 then 
 echo " Launch configuration $launch_config completed successfully "
+echo
 else
 echo " Error creating launch configuration "
 exit 0
@@ -296,4 +299,5 @@ echo
 echo " ########################################################################################################### "
 echo " Successfully completed the Week-7 deployment of instances in cloud with load balancer and autoscaling group"
 echo " ########################################################################################################### "
-
+echo
+echo
