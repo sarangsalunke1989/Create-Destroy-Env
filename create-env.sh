@@ -213,7 +213,7 @@ aws autoscaling create-launch-configuration --launch-configuration-name $launch_
 
 if [ $? -eq 0 ]
 then 
-echo " Launch configuration completed successfully "
+echo " Launch configuration $launch_config completed successfully "
 else
 echo " Error creating launch configuration "
 exit 0
@@ -266,6 +266,29 @@ for (( i=0;i<$inst_count;i++ ))
 
 echo "All instances are now InService state"
 
+
+echo
+
+lb_dns_id=0
+for i in `aws elb describe-load-balancers --query 'LoadBalancerDescriptions[].LoadBalancerName'`
+do
+if [ $i == "$load_bal_name" ]
+then
+echo $a
+else
+lb_dns_id=`expr $lb_dns_id + 1`
+fi
+done
+
+dns_name=`aws elb describe-load-balancers --query 'LoadBalancerDescriptions['$lb_dns_id'].DNSName'`
+echo
+
+echo "****************************************************************************************************"
+echo
+echo " Enter $dns_name in the browser to view the website "
+echo
+
+echo "****************************************************************************************************"
 
 echo
 
