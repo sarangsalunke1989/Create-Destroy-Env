@@ -162,7 +162,7 @@ fi
 
 
 
-##Searching for subnet id in us-west-2a region
+######Searching for subnet id in us-west-2a region
 subnet_id=`aws ec2 describe-subnets |grep -i us-west-2a |awk '{print $8}'|head -1`
 if [ $? -eq 0 ]
 then
@@ -204,7 +204,7 @@ echo "-------------------------------------------------------------"
 
 echo
 
-###For week-7 assignment requirement
+#######For week-7 assignment requirement
 ##echo "Enter launch configuration name [Avoid using _ in the name] "
 ##read launch_config_name
 
